@@ -7,7 +7,10 @@ baseurl: "/the-nature-of-code.js" # the subpath of your site, e.g. /blog/
 url: "http://lpil.github.io" # the base hostname & protocol for your site
 
 markdown: kramdown
-sass_dir: _scss
+permalink: pretty
+
+sass:
+  sass_dir: _scss
 
 defaults:
   - scope:
