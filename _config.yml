@@ -1,0 +1,25 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+
+description: >
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+baseurl: "/the-nature-of-code.js" # the subpath of your site, e.g. /blog/
+url: "http://lpil.github.io" # the base hostname & protocol for your site
+
+markdown: kramdown
+sass_dir: _scss
+
+defaults:
+  - scope:
+      path: "" # empty string for all files
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
