@@ -1,13 +1,13 @@
-var x = 100,
-    y = 100,
-    xSpeed = 1.5,
-    ySpeed = 2.5,
-    radius = 16,
+var rand     = Math.random,
+    x        = 100,
+    y        = 100,
+    xSpeed   = rand() * 4,
+    ySpeed   = rand() * 4,
+    radius   = rand() * 28 + 6,
     diameter = radius * 2;
 
 function setup() {
-  var canvas = createCanvas(500, 200);
-  canvas.parent('canvas-container');
+  createCanvas(500, 200).parent('canvas-container');
 }
 
 function draw() {
