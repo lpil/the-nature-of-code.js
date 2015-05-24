@@ -1,0 +1,11 @@
+{% assign pages = (site.pages | where: 'chapter', include.number | sort: 'index') %}
+{% unless pages == empty %}
+<h2>Chapter {{ include.number }}</h2>
+<ul>
+{% for page in pages %}
+  <li>
+    <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+{% endunless %}
