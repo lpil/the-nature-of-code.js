@@ -9,7 +9,20 @@
   </head>
   <body>
 
-    {{ content }}
+    <div class="page">
+      {% if page.title %}
+      <h1>
+        {{ page.title }}
+      </h1>
+      {% endif %}
+
+      {{ content }}
+
+      {% unless page.url == '/' %}
+      <a href="{{ site.baseurl }}/">Back</a>
+      {% endunless %}
+    </div>
+
 
   </body>
 </html>

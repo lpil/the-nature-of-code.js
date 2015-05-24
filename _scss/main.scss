@@ -1,3 +1,10 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 @import 'vendor/syntax-highlighting';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/canvas';
+
+@import 'layout/page';
