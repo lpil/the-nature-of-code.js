@@ -19,7 +19,7 @@
       {{ content }}
 
       {% unless page.url == '/' %}
-      <a href="{{ site.baseurl }}/">Back</a>
+      {% include prev-next-nav.html %}
       {% endunless %}
     </div>
 

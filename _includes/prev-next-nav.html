@@ -1,0 +1,23 @@
+{% assign prev_index = page.index | minus: 1 %}
+{% assign next_index = page.index | plus:  1 %}
+
+{% assign prev = (site.pages | where: 'index', prev_index | first) %}
+{% assign next = (site.pages | where: 'index', next_index | first) %}
+
+<nav class="prev-next">
+
+  {% if prev %}
+  <a href="{{ site.baseurl }}{{ prev.url }}">&lt;&lt;</a>
+  {% else %}
+  <span>&lt;&lt;</span>
+  {% endif %}
+
+  <a href="{{ site.baseurl }}/">Index</a>
+
+  {% if next %}
+  <a href="{{ site.baseurl }}{{ next.url }}">&gt;&gt;</a>
+  {% else %}
+  <span>&gt;&gt;</span>
+  {% endif %}
+
+</nav>

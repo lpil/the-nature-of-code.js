@@ -12,10 +12,10 @@ function draw() {
   mouse.sub(center);
 
   // Plot magnitude
-  magnitude = mouse.mag()
+  magnitude = mouse.mag();
   fill(0);
-  rect(0         , height - magnitude, 10, magnitude);
-  rect(width - 11, height - magnitude, 10, magnitude);
+  rect(0         , height + 1 - magnitude, 10, magnitude);
+  rect(width - 11, height + 1 - magnitude, 10, magnitude);
 
   translate(center.x, center.y);
   line(0, 0, mouse.x, mouse.y);
