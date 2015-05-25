@@ -5,4 +5,8 @@ body {
 a {
   color: teal;
   text-decoration: none;
+
+  &:visited {
+    color: darken(teal, 6);
+  }
 }
