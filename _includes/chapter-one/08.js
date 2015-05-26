@@ -1,10 +1,9 @@
 var mover;
 
 function Mover() {
-  var rand = function() { return Math.random() * 2 + 1; };
   this.radius       = Math.random() * 20 + 12;
   this.diameter     = this.radius * 2;
-  this.position     = createVector(width / 2, this.diameter * 1.1);
+  this.position     = createVector(width / 2, this.diameter * 1.5);
   this.velocity     = createVector(0, 0);
   this.acceleration = createVector(0, 0.2);
 }
