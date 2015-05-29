@@ -6,7 +6,6 @@ function Balloon() {
   this.position = createVector(width/2, height - this.diameter);
   this.velocity = createVector(0, 0);
   this.acceleration = createVector(0, 0);
-  this.topSpeed     = 5;
 }
 Balloon.prototype.render = function() {
   stroke(0);
@@ -23,6 +22,7 @@ Balloon.prototype.move = function() {
 Balloon.prototype.bounce = function() {
   if (this.position.y < this.radius) {
     this.velocity.y = Math.abs(this.velocity.y);
+    this.position.y = this.radius;
   }
   if (this.position.x < this.radius) {
     this.position.x = this.radius;
