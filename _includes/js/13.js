@@ -38,7 +38,7 @@ Balloon.prototype.applyForce = function(force) {
 };
 
 function plotWind(wind) {
-  wind = wind * width * 7;
+  wind = wind * width;
   rect(width/2, height - 10, wind, 10);
 }
 
@@ -57,9 +57,9 @@ function draw() {
 }
 
 function update() {
-  step = step + 0.005;
+  step = step + 0.002;
   wind = noise(step) - noise(step + 1000);
-  wind = wind / 7;
-  balloon.applyForce(wind);
+  wind = wind / 2;
+  balloon.applyForce(wind / 7);
   balloon.move();
 }
