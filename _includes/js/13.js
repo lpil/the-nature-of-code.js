@@ -1,4 +1,4 @@
-var balloon, lift, step = Math.round(Math.random() * 1000);
+var balloon, lift, wind, step = Math.round(Math.random() * 1000);
 
 function Balloon() {
   this.radius = 64;
@@ -25,15 +25,22 @@ Balloon.prototype.bounce = function() {
     this.velocity.y = Math.abs(this.velocity.y);
   }
   if (this.position.x < this.radius) {
+    this.position.x = this.radius;
     this.velocity.x = Math.abs(this.velocity.x) / 2;
   } else
     if (this.position.x > width - this.radius) {
+    this.position.x = width - this.radius;
     this.velocity.x = Math.abs(this.velocity.x) * -1 / 2;
   }
 };
 Balloon.prototype.applyForce = function(force) {
   this.acceleration.add(force);
 };
+
+function plotWind(wind) {
+  wind = wind * width * 7;
+  rect(width/2, height - 10, wind, 10);
+}
 
 
 function setup() {
@@ -43,10 +50,16 @@ function setup() {
 }
 
 function draw() {
-  wind = noise(step++) - noise(step + 1000);
-  wind = wind / 7;
   background(255);
   balloon.render();
+  plotWind(wind);
+  update();
+}
+
+function update() {
+  step = step + 0.005;
+  wind = noise(step) - noise(step + 1000);
+  wind = wind / 7;
   balloon.applyForce(wind);
   balloon.move();
 }
