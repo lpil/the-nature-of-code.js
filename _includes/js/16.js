@@ -8,7 +8,7 @@ function draw() {
       diameter = radius * 2;
 
   translate(width/2, height/2);
-  background(255, 255, 255, 20);
+  background(0);
 
   rotate(rotStep);
 
@@ -16,13 +16,14 @@ function draw() {
   radStep += 0.007;
 
   fill(0, 0);
+  stroke(255);
   while (i--) {
     ellipse(radius, 0, diameter, diameter);
     rotate(angle);
   }
 }
 
-var segments = 50,
+var segments = 40,
     rotStep  = 0,
     angle    = Math.PI * 2 / segments,
     radStep  = 100;
