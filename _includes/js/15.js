@@ -1,4 +1,4 @@
-var gravity, wind, balls = [], step = Math.round(Math.random() * 1000);
+var wind, balls = [], step = Math.round(Math.random() * 1000);
 
 function Ball() {
   this.radius = Math.random() * 64;
