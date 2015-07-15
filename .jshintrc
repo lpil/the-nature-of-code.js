@@ -14,6 +14,8 @@
   "strict": false,
   "trailing": true,
   "smarttabs": true,
+  "browser": true,
+  "devel": true,
   "globals": {
     "background": true,
     "createCanvas": true,
@@ -21,11 +23,13 @@
     "ellipse": true,
     "fill": true,
     "height": true,
+    "noStroke": true,
     "noise": true,
     "rect": true,
     "rotate": true,
     "stroke": true,
     "translate": true,
+    "update": true,
     "width": true
   }
 }
